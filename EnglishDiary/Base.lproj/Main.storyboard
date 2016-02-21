@@ -26,7 +26,7 @@
         <!--Third View Controller-->
         <scene sceneID="KjM-NR-yH8">
             <objects>
-                <viewController storyboardIdentifier="welcom" id="eU2-a4-EVE" customClass="ThirdViewController" customModule="EnglishDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcomeedit" id="eU2-a4-EVE" customClass="ThirdViewController" customModule="EnglishDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y4J-WA-llG"/>
                         <viewControllerLayoutGuide type="bottom" id="pEq-oo-d2B"/>
@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16I-Y1-xM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1511" y="-475"/>
+            <point key="canvasLocation" x="1511" y="-469"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="d1W-iD-50B">
@@ -317,7 +317,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6cj-lN-Sfn"/>
-        <segue reference="0AJ-HF-D2S"/>
+        <segue reference="fkk-1U-nIq"/>
+        <segue reference="RIQ-Eh-4WI"/>
     </inferredMetricsTieBreakers>
 </document>

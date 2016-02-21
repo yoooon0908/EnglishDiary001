@@ -10,6 +10,7 @@ import UIKit
 
 class FifthViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet weak var fifTableView: UITableView!
     
@@ -69,7 +70,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
             var d2 = data["Ja"] as! String
             //var d1 = data
             
-            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+//            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.langEn = d1
             
             self.englist.append(data as! NSDictionary)
@@ -86,10 +87,21 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        print("\(indexPath.row)行目を選択")
 //        fifSelect = indexPath.row
 //        performSegueWithIdentifier("showFif",sender: nil)
+        
+        
        
-        //データを送る
-        var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcome")
-        self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
+       
+        
+        if appDelegate.edit == "" {
+            //データを送る
+            var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcome")
+            self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
+            
+        }else{
+            var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcomeedit")
+            self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
+
+        }
         
         
     }

@@ -26,6 +26,8 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        appDelegate.edit = "edit"
+        
         // Do any additional setup after loading the view.
     }
     

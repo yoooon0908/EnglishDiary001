@@ -21,6 +21,8 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        appDelegate.edit = ""
        
     }
     
