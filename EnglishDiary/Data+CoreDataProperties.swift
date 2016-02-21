@@ -16,7 +16,7 @@ extension Data {
 
     @NSManaged var title: String?
     @NSManaged var content: String?
-    @NSManaged var photo: String?
+    @NSManaged var image: String?
     @NSManaged var date: NSTimeInterval
 
 }

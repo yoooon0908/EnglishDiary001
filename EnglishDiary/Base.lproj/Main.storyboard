@@ -313,7 +313,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNa-QE-4Ht" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="273"/>
+            <point key="canvasLocation" x="392" y="273"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
