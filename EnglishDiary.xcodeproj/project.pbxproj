@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		E9EC86131C782E4A009D9D97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC86121C782E4A009D9D97 /* AppDelegate.swift */; };
 		E9EC86151C782E4A009D9D97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC86141C782E4A009D9D97 /* ViewController.swift */; };
 		E9EC86181C782E4A009D9D97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EC86161C782E4A009D9D97 /* Main.storyboard */; };
@@ -21,6 +22,13 @@
 		E9EC864A1C7838FE009D9D97 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC86491C7838FE009D9D97 /* FourthViewController.swift */; };
 		E9EC864C1C783917009D9D97 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC864B1C783917009D9D97 /* FifthViewController.swift */; };
 		E9EC86501C783DD0009D9D97 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9EC864F1C783DD0009D9D97 /* json.txt */; };
+=======
+		E9B2E5F01C71AE2000A091BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E5EF1C71AE2000A091BD /* AppDelegate.swift */; };
+		E9B2E5F21C71AE2000A091BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B2E5F11C71AE2000A091BD /* ViewController.swift */; };
+		E9B2E5F51C71AE2000A091BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E5F31C71AE2000A091BD /* Main.storyboard */; };
+		E9B2E5F71C71AE2000A091BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E5F61C71AE2000A091BD /* Assets.xcassets */; };
+		E9B2E5FA1C71AE2000A091BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9B2E5F81C71AE2000A091BD /* LaunchScreen.storyboard */; };
+>>>>>>> parent of 0ee25b0... start commit
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		E9EC860F1C782E4A009D9D97 /* EnglishDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EC86121C782E4A009D9D97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9EC86141C782E4A009D9D97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +70,15 @@
 		E9EC86491C7838FE009D9D97 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		E9EC864B1C783917009D9D97 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		E9EC864F1C783DD0009D9D97 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
+=======
+		E9B2E5EC1C71AE2000A091BD /* EnglishDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnglishDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9B2E5EF1C71AE2000A091BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E9B2E5F11C71AE2000A091BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9B2E5F41C71AE2000A091BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9B2E5F61C71AE2000A091BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9B2E5F91C71AE2000A091BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9B2E5FB1C71AE2000A091BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+>>>>>>> parent of 0ee25b0... start commit
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +129,7 @@
 		E9EC86111C782E4A009D9D97 /* EnglishDiary */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				E9EC86121C782E4A009D9D97 /* AppDelegate.swift */,
 				E9EC86141C782E4A009D9D97 /* ViewController.swift */,
 				E9EC86431C7838B8009D9D97 /* FirstViewController.swift */,
@@ -124,6 +143,14 @@
 				E9EC86211C782E4A009D9D97 /* Info.plist */,
 				E9EC86191C782E4A009D9D97 /* EnglishDiary.xcdatamodeld */,
 				E9EC864F1C783DD0009D9D97 /* json.txt */,
+=======
+				E9B2E5EF1C71AE2000A091BD /* AppDelegate.swift */,
+				E9B2E5F11C71AE2000A091BD /* ViewController.swift */,
+				E9B2E5F31C71AE2000A091BD /* Main.storyboard */,
+				E9B2E5F61C71AE2000A091BD /* Assets.xcassets */,
+				E9B2E5F81C71AE2000A091BD /* LaunchScreen.storyboard */,
+				E9B2E5FB1C71AE2000A091BD /* Info.plist */,
+>>>>>>> parent of 0ee25b0... start commit
 			);
 			path = EnglishDiary;
 			sourceTree = "<group>";
@@ -278,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				E9EC861B1C782E4A009D9D97 /* EnglishDiary.xcdatamodeld in Sources */,
 				E9EC86151C782E4A009D9D97 /* ViewController.swift in Sources */,
 				E9EC86131C782E4A009D9D97 /* AppDelegate.swift in Sources */,
@@ -302,6 +330,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC86361C782E4A009D9D97 /* EnglishDiaryUITests.swift in Sources */,
+=======
+				E9B2E5F21C71AE2000A091BD /* ViewController.swift in Sources */,
+				E9B2E5F01C71AE2000A091BD /* AppDelegate.swift in Sources */,
+>>>>>>> parent of 0ee25b0... start commit
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
