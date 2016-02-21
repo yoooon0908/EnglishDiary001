@@ -22,6 +22,8 @@
 		E9EC864C1C783917009D9D97 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC864B1C783917009D9D97 /* FifthViewController.swift */; };
 		E9EC86501C783DD0009D9D97 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9EC864F1C783DD0009D9D97 /* json.txt */; };
 		E9EC879B1C7995BA009D9D97 /* life.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9EC879A1C7995B9009D9D97 /* life.txt */; };
+		E9EC87E31C79C396009D9D97 /* Data+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC87E11C79C396009D9D97 /* Data+CoreDataProperties.swift */; };
+		E9EC87E41C79C396009D9D97 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC87E21C79C396009D9D97 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		E9EC864B1C783917009D9D97 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		E9EC864F1C783DD0009D9D97 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
 		E9EC879A1C7995B9009D9D97 /* life.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = life.txt; sourceTree = "<group>"; };
+		E9EC87E11C79C396009D9D97 /* Data+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+CoreDataProperties.swift"; path = "EnglishDiary/Data+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E9EC87E21C79C396009D9D97 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = EnglishDiary/Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		E9EC86061C782E4A009D9D97 = {
 			isa = PBXGroup;
 			children = (
+				E9EC87E11C79C396009D9D97 /* Data+CoreDataProperties.swift */,
+				E9EC87E21C79C396009D9D97 /* Data.swift */,
 				E9EC86111C782E4A009D9D97 /* EnglishDiary */,
 				E9EC86291C782E4A009D9D97 /* EnglishDiaryTests */,
 				E9EC86341C782E4A009D9D97 /* EnglishDiaryUITests */,
@@ -283,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC861B1C782E4A009D9D97 /* EnglishDiary.xcdatamodeld in Sources */,
+				E9EC87E41C79C396009D9D97 /* Data.swift in Sources */,
 				E9EC86151C782E4A009D9D97 /* ViewController.swift in Sources */,
 				E9EC86131C782E4A009D9D97 /* AppDelegate.swift in Sources */,
 				E9EC864A1C7838FE009D9D97 /* FourthViewController.swift in Sources */,
@@ -290,6 +297,7 @@
 				E9EC86461C7838C5009D9D97 /* SecondViewController.swift in Sources */,
 				E9EC86481C7838F1009D9D97 /* ThirdViewController.swift in Sources */,
 				E9EC86441C7838B8009D9D97 /* FirstViewController.swift in Sources */,
+				E9EC87E31C79C396009D9D97 /* Data+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

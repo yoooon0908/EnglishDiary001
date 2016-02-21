@@ -86,9 +86,9 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        print("\(indexPath.row)行目を選択")
 //        fifSelect = indexPath.row
 //        performSegueWithIdentifier("showFif",sender: nil)
+       
         //データを送る
         var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcome")
-        
         self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
         
         
