@@ -11,8 +11,7 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     @IBOutlet weak var foTableView: UITableView!
-    //気分をリストで表示できるようにする
-    //辞書＋辞書
+    
     var englist:[NSDictionary] = []
     var select = -1
     
@@ -30,7 +29,7 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         return englist.count
     }
     
-    //表示するセルの中身2
+    //表示するセルの中身
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) ->UITableViewCell{
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "myCell")
         
@@ -44,7 +43,7 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         //        cell.textLabel!.textColor = UIColor.brownColor()
         //        //チェックマークをつける
         //        cell.accessoryType = .DisclosureIndicator
-        //        cell.textLabel!.font = UIFont.systemFontOfSize(20)
+        cell.textLabel!.font = UIFont.systemFontOfSize(15)
         
         return cell
     }
@@ -63,7 +62,6 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         for data in jsonDictionaray {
             var d1 = data["En"] as! String
             var d2 = data["Ja"] as! String
-            //var d1 = data
             
             print(d1)
             self.englist.append(data as! NSDictionary)
@@ -79,12 +77,11 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         performSegueWithIdentifier("showFifthView",sender: nil)
     }
 
-    // Segueで画面遷移する時
+    // Segueで画面遷移する時データを送る
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var FifthVC = segue.destinationViewController as! FifthViewController
         
-        FifthVC.fifSelect = select
-    
+            FifthVC.fifSelect = select
     
     }
     
@@ -94,14 +91,6 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
+ 
     
 }

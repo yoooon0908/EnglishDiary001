@@ -11,6 +11,8 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     var secSelect = -1
     var englist:[NSDictionary] = []
+  
+    var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet weak var dateText001: UITextField!
     @IBOutlet weak var titleText001: UITextField!
@@ -19,7 +21,19 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        //戻るコード
+        //self.dismissViewControllerAnimated(true, completion: nil)
+
+         var langEn = appDelegate.langEn
+        secTextView.text = secTextView.text + langEn
+        
+
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -66,21 +80,21 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
 
     
-    override func viewWillAppear(animated: Bool) {
-        //jsonファイル読み込む
-        let path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
-        let jsondata = NSData(contentsOfFile: path!)
-        //辞書データに変換
-        let jsonArray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
-        
-        let dic = jsonArray[secSelect]
-        
-       
-        secTextView.text = dic["En"] as! String
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        //jsonファイル読み込む
+//        let path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
+//        let jsondata = NSData(contentsOfFile: path!)
+//        //辞書データに変換
+//        let jsonArray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
+//        
+//        let dic = jsonArray[secSelect]
+//        
+//       
+//        secTextView.text = dic["En"] as! String
+//    }
+//    
+//
+//    
     
-
-    
-      
 }
 

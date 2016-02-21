@@ -21,6 +21,7 @@
 		E9EC864A1C7838FE009D9D97 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC86491C7838FE009D9D97 /* FourthViewController.swift */; };
 		E9EC864C1C783917009D9D97 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC864B1C783917009D9D97 /* FifthViewController.swift */; };
 		E9EC86501C783DD0009D9D97 /* json.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9EC864F1C783DD0009D9D97 /* json.txt */; };
+		E9EC879B1C7995BA009D9D97 /* life.txt in Resources */ = {isa = PBXBuildFile; fileRef = E9EC879A1C7995B9009D9D97 /* life.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E9EC86491C7838FE009D9D97 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		E9EC864B1C783917009D9D97 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 		E9EC864F1C783DD0009D9D97 /* json.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json.txt; sourceTree = "<group>"; };
+		E9EC879A1C7995B9009D9D97 /* life.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = life.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				E9EC86211C782E4A009D9D97 /* Info.plist */,
 				E9EC86191C782E4A009D9D97 /* EnglishDiary.xcdatamodeld */,
 				E9EC864F1C783DD0009D9D97 /* json.txt */,
+				E9EC879A1C7995B9009D9D97 /* life.txt */,
 			);
 			path = EnglishDiary;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				E9EC86201C782E4A009D9D97 /* LaunchScreen.storyboard in Resources */,
 				E9EC861D1C782E4A009D9D97 /* Assets.xcassets in Resources */,
 				E9EC86181C782E4A009D9D97 /* Main.storyboard in Resources */,
+				E9EC879B1C7995BA009D9D97 /* life.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

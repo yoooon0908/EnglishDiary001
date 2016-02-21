@@ -18,7 +18,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     var englist:[NSDictionary] = []
     var fifSelect = -1
     
-    
+    var langEn = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,13 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         
         //        cell.textLabel!.text = "\(indexPath.row)行目"
+        
         cell.textLabel!.text = "\(englist[indexPath.row]["En"])"
         //        //文字を茶色にする
         //        cell.textLabel!.textColor = UIColor.brownColor()
         //        //チェックマークをつける
         //        cell.accessoryType = .DisclosureIndicator
-        //        cell.textLabel!.font = UIFont.systemFontOfSize(20)
+        cell.textLabel!.font = UIFont.systemFontOfSize(15)
         
         return cell
     }
@@ -61,14 +62,20 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
         
+       
         
         for data in jsonDictionaray {
             var d1 = data["En"] as! String
             var d2 = data["Ja"] as! String
             //var d1 = data
             
-            print(d1)
+            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.langEn = d1
+            
             self.englist.append(data as! NSDictionary)
+            
+            print(d1)
+
             
         }
         
@@ -76,19 +83,25 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // 選択された時に行う処理
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("\(indexPath.row)行目を選択")
-        fifSelect = indexPath.row
-        performSegueWithIdentifier("showFif",sender: nil)
+//        print("\(indexPath.row)行目を選択")
+//        fifSelect = indexPath.row
+//        performSegueWithIdentifier("showFif",sender: nil)
+        //データを送る
+        var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcome")
+        
+        self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
+        
+        
     }
-    
+//
     // Segueで画面遷移する時
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var secVC = segue.destinationViewController as! SecondViewController
-        
-        secVC.secSelect = fifSelect
-        
-        
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        var secVC = segue.destinationViewController as! SecondViewController
+//        
+//        secVC.secSelect = fifSelect
+//        
+//        
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -96,14 +109,5 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }

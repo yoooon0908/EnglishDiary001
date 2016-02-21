@@ -26,7 +26,7 @@
         <!--Third View Controller-->
         <scene sceneID="KjM-NR-yH8">
             <objects>
-                <viewController id="eU2-a4-EVE" customClass="ThirdViewController" customModule="EnglishDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcom" id="eU2-a4-EVE" customClass="ThirdViewController" customModule="EnglishDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Y4J-WA-llG"/>
                         <viewControllerLayoutGuide type="bottom" id="pEq-oo-d2B"/>
@@ -70,12 +70,19 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="np8-wv-QkV">
-                                <rect key="frame" x="20" y="201" width="240" height="128"/>
+                                <rect key="frame" x="20" y="193" width="240" height="310"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-bj-IBb">
+                                <rect key="frame" x="8" y="51" width="100" height="91"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapImage:" destination="eU2-a4-EVE" eventType="touchUpInside" id="8G6-H2-OZP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -87,12 +94,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16I-Y1-xM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1551" y="-331"/>
+            <point key="canvasLocation" x="1511" y="-475"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="d1W-iD-50B">
             <objects>
-                <viewController id="JZF-Ji-4yJ" customClass="SecondViewController" customModule="EnglishDiary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="welcome" id="JZF-Ji-4yJ" customClass="SecondViewController" customModule="EnglishDiary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z1c-Fm-w8D"/>
                         <viewControllerLayoutGuide type="bottom" id="gl6-hl-1TH"/>
@@ -118,7 +125,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ybk-7K-y70">
-                                <rect key="frame" x="16" y="211" width="240" height="128"/>
+                                <rect key="frame" x="16" y="207" width="240" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -157,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcf-FI-cMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3" y="1167"/>
+            <point key="canvasLocation" x="-49" y="1023"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="bxL-Kf-b9b">
@@ -245,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fy1-nh-Tek" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456" y="394"/>
+            <point key="canvasLocation" x="1536" y="466"/>
         </scene>
         <!--Fifth View Controller-->
         <scene sceneID="CNu-8h-TKe">
@@ -270,9 +277,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="JZF-Ji-4yJ" kind="show" identifier="showFif" id="SF4-jn-GOt"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -290,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igc-52-bSr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="394"/>
+            <point key="canvasLocation" x="2050" y="466"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="d0s-2n-Vtj">
@@ -313,8 +317,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0AJ-HF-D2S"/>
-        <segue reference="tRJ-My-r5L"/>
-        <segue reference="6cj-lN-Sfn"/>
+        <segue reference="fkk-1U-nIq"/>
+        <segue reference="RIQ-Eh-4WI"/>
     </inferredMetricsTieBreakers>
 </document>
