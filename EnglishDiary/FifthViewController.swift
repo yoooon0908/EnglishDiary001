@@ -23,8 +23,18 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         // Do any additional setup after loading the view.
+        
+        //背景画像
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
+        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        
+        
+
     }
     
     
@@ -38,17 +48,18 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "myCell2")
         
         
-        //cell.textLabel!.text = "d1"
-        
-        
-        //        cell.textLabel!.text = "\(indexPath.row)行目"
-        
         cell.textLabel!.text = "\(englist[indexPath.row]["En"])"
-        //        //文字を茶色にする
-        //        cell.textLabel!.textColor = UIColor.brownColor()
-        //        //チェックマークをつける
-        //        cell.accessoryType = .DisclosureIndicator
+        //文字色
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        //文字大きさ
         cell.textLabel!.font = UIFont.systemFontOfSize(15)
+        // 背景色
+        cell.backgroundColor = UIColor.clearColor()
+        // 選択された時の背景色
+        var cellSelectedBgView = UIView()
+        cellSelectedBgView.backgroundColor =  UIColor(red: 1.0, green: 0, blue: 1.0, alpha: 0.2)
+        cell.selectedBackgroundView = cellSelectedBgView
+        
         
         return cell
     }
@@ -68,29 +79,15 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
         for data in jsonDictionaray {
             var d1 = data["En"] as! String
             var d2 = data["Ja"] as! String
-            //var d1 = data
             
-//            var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.langEn = d1
-            
             self.englist.append(data as! NSDictionary)
-            
             print(d1)
-
-            
         }
-        
     }
     
     // 選択された時に行う処理
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        print("\(indexPath.row)行目を選択")
-//        fifSelect = indexPath.row
-//        performSegueWithIdentifier("showFif",sender: nil)
-        
-        
-       
-       
         
         if appDelegate.edit == "" {
             //データを送る
@@ -102,18 +99,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
             self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
 
         }
-        
-        
     }
-//
-    // Segueで画面遷移する時
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        var secVC = segue.destinationViewController as! SecondViewController
-//        
-//        secVC.secSelect = fifSelect
-//        
-//        
-//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

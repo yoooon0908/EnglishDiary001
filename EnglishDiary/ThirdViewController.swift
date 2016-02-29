@@ -24,6 +24,15 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     
     override func viewDidLoad() {
+        
+        //背景画像
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
+        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+
+        
         super.viewDidLoad()
         
         appDelegate.edit = "edit"

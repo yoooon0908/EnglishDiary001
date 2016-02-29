@@ -13,7 +13,8 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var foTableView: UITableView!
     
-    var englist:[NSDictionary] = []
+//    var englist:[NSDictionary] = []
+    var main = ["Life","Study","Trip"]
     var select = -1
     
 
@@ -22,12 +23,23 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        //背景画像
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
+        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.view.backgroundColor = UIColor(patternImage: image)
+        
+        
+
     }
+    
     
     
     //行数
     func tableView(tabeleView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return englist.count
+        return main.count
     }
     
     //表示するセルの中身
@@ -39,37 +51,45 @@ class FourthViewController: UIViewController, UITableViewDataSource, UITableView
         
         
         //        cell.textLabel!.text = "\(indexPath.row)行目"
-        cell.textLabel!.text = "\(englist[indexPath.row]["En"])"
-        //        //文字を茶色にする
-        //        cell.textLabel!.textColor = UIColor.brownColor()
+        cell.textLabel!.text = "\(main[indexPath.row])"
+        //文字色
+        cell.textLabel!.textColor = UIColor.whiteColor()
         //        //チェックマークをつける
         //        cell.accessoryType = .DisclosureIndicator
-        cell.textLabel!.font = UIFont.systemFontOfSize(15)
+        
+        // 背景色
+        cell.backgroundColor = UIColor.clearColor()
+        // 選択された時の背景色
+        // 選択された時の背景色
+        var cellSelectedBgView = UIView()
+        cellSelectedBgView.backgroundColor =  UIColor(red: 1.0, green: 0, blue: 1.0, alpha: 0.2)
+        cell.selectedBackgroundView = cellSelectedBgView
+        
         
         return cell
     }
     
     
     
-    override func viewWillAppear(animated: Bool) {
-        //json.txtファイルを読み込んで
-        var path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
-        var jsondata = NSData(contentsOfFile: path!)
-        
-        
-        let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
-        
-        
-        for data in jsonDictionaray {
-            var d1 = data["En"] as! String
-            var d2 = data["Ja"] as! String
-            
-            print(d1)
-            self.englist.append(data as! NSDictionary)
-            
-        }
-        
-    }
+//    override func viewWillAppear(animated: Bool) {
+//        //json.txtファイルを読み込んで
+//        var path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
+//        var jsondata = NSData(contentsOfFile: path!)
+//        
+//        
+//        let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
+//        
+//        
+//        for data in jsonDictionaray {
+//            var d1 = data["En"] as! String
+//            var d2 = data["Ja"] as! String
+//            
+//            print(d1)
+//            self.main.append(data as! NSArray)
+//            
+//        }
+//        
+//    }
     
     // 選択された時に行う処理
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
