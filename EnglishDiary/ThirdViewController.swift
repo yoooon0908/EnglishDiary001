@@ -13,64 +13,37 @@ import Social
 class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    //これから画面遷移＆データを送れるようにする
-    
-    
-    
     @IBOutlet weak var thImageView: UIImageView!
     @IBOutlet weak var thTextView: UITextView!
+    
     
     var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     
     override func viewDidLoad() {
         
-        //背景画像
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
-        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
-
-        
+//        //背景画像
+//        UIGraphicsBeginImageContext(self.view.frame.size)
+//        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
+//        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        self.view.backgroundColor = UIColor(patternImage: image)
+//
         super.viewDidLoad()
         
         appDelegate.edit = "edit"
-        
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
         
-        //戻るコード
-        //self.dismissViewControllerAnimated(true, completion: nil)
-        
         var langEn = appDelegate.langEn
-        thTextView.text = thTextView.text + langEn
-        
-        
-        
+        thTextView.text = appDelegate.texttmp + langEn
     }
 
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-//    override func viewWillAppear(animated: Bool) {
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//        
-//        var langEn = appDelegate.langEn
-//        thTextView.text = thTextView.text + langEn
-//        
-//        
-//        
-//    }
-
     
     @IBAction func tapFBBtn(sender: UIButton) {
         var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
@@ -78,8 +51,6 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UI
         //facebookVC.addImage(UIImage(named: "cat.png"))
         
         presentViewController(facebookVC, animated: true, completion: nil)
-        
-        
     }
     
     @IBAction func tapImage(sender: UIButton) {
@@ -101,8 +72,6 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UI
         // 選択した画像を取得
         if info[UIImagePickerControllerOriginalImage] != nil {
             if let photo:UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-                
-                // ImageViewに画像を設定
                 thImageView.image = photo
             }
         }
@@ -110,6 +79,9 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UI
         picker.dismissViewControllerAnimated(true, completion: nil)
         
     }
+    @IBAction func tapStar(sender: UIButton) {
+        appDelegate.texttmp = thTextView.text
+
+    }
     
-     
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class FifthViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
-
+    
     var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     @IBOutlet weak var fifTableView: UITableView!
@@ -23,18 +23,18 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         // Do any additional setup after loading the view.
         
         //背景画像
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
-        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
+//        UIGraphicsBeginImageContext(self.view.frame.size)
+//        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
+//        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        self.view.backgroundColor = UIColor(patternImage: image)
+//        
         
         
-
     }
     
     
@@ -48,7 +48,8 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
         var cell = UITableViewCell(style: .Default, reuseIdentifier: "myCell2")
         
         
-        cell.textLabel!.text = "\(englist[indexPath.row]["En"])"
+        cell.textLabel!.text = "\(englist[indexPath.row]["En"])" + "\(englist[indexPath.row]["Ja"])"
+        
         //文字色
         cell.textLabel!.textColor = UIColor.whiteColor()
         //文字大きさ
@@ -68,23 +69,52 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewWillAppear(animated: Bool) {
         //json.txtファイルを読み込んで
-        var path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
-        var jsondata = NSData(contentsOfFile: path!)
         
-        
-        let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
-        
-       
-        
-        for data in jsonDictionaray {
-            var d1 = data["En"] as! String
-            var d2 = data["Ja"] as! String
+        if fifSelect == 0 {
+            var path = NSBundle.mainBundle().pathForResource("life", ofType: "txt")
+            var jsondata = NSData(contentsOfFile: path!)
+            let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
             
-            appDelegate.langEn = d1
-            self.englist.append(data as! NSDictionary)
-            print(d1)
+            for data in jsonDictionaray {
+                var d1 = data["En"] as! String
+                var d2 = data["Ja"] as! String
+                
+                appDelegate.langEn = d1
+                self.englist.append(data as! NSDictionary)
+                print(d1)
+                print(d2)
+            }
+        }else if fifSelect == 1 {
+            var path = NSBundle.mainBundle().pathForResource("study", ofType: "txt")
+            var jsondata = NSData(contentsOfFile: path!)
+            let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
+        
+            for data in jsonDictionaray {
+                var d1 = data["En"] as! String
+                var d2 = data["Ja"] as! String
+            
+                appDelegate.langEn = d1
+                self.englist.append(data as! NSDictionary)
+                print(d1)
+                print(d2)
+            }
+        }else if fifSelect == 2 {
+            var path = NSBundle.mainBundle().pathForResource("trip", ofType: "txt")
+            var jsondata = NSData(contentsOfFile: path!)
+            let jsonDictionaray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
+            
+            for data in jsonDictionaray {
+                var d1 = data["En"] as! String
+                var d2 = data["Ja"] as! String
+                
+                appDelegate.langEn = d1
+                self.englist.append(data as! NSDictionary)
+                print(d1)
+                print(d2)
+            }
         }
     }
+    
     
     // 選択された時に行う処理
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -97,7 +127,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
         }else{
             var targetView: AnyObject = self.storyboard!.instantiateViewControllerWithIdentifier("welcomeedit")
             self.presentViewController(targetView as! UIViewController, animated: true, completion: nil)
-
+            
         }
     }
     

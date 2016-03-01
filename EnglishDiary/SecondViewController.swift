@@ -19,18 +19,21 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     @IBOutlet weak var secImageView: UIImageView!
     @IBOutlet weak var secTextView: UITextView!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         appDelegate.edit = ""
         
         
-        //背景画像
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
-        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        self.view.backgroundColor = UIColor(patternImage: image)
+//        //背景画像
+//        UIGraphicsBeginImageContext(self.view.frame.size)
+//        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
+//        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//        self.view.backgroundColor = UIColor(patternImage: image)
 
        
     }
@@ -41,7 +44,7 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         //self.dismissViewControllerAnimated(true, completion: nil)
 
          var langEn = appDelegate.langEn
-        secTextView.text = secTextView.text + langEn
+        secTextView.text = appDelegate.texttmp + langEn
         
 
         
@@ -55,7 +58,8 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     //★の内容をtextfildに表示させる
     
     @IBAction func tapStar(sender: UIButton) {
-        secTextView.text = "リストからデータをもってくる"
+        appDelegate.texttmp = secTextView.text
+        
     }
     
     
@@ -88,24 +92,6 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         
     }
     
-    
 
-    
-//    override func viewWillAppear(animated: Bool) {
-//        //jsonファイル読み込む
-//        let path = NSBundle.mainBundle().pathForResource("json", ofType: "txt")
-//        let jsondata = NSData(contentsOfFile: path!)
-//        //辞書データに変換
-//        let jsonArray = (try! NSJSONSerialization.JSONObjectWithData(jsondata!, options: [])) as! NSArray
-//        
-//        let dic = jsonArray[secSelect]
-//        
-//       
-//        secTextView.text = dic["En"] as! String
-//    }
-//    
-//
-//    
-    
 }
 
