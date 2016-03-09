@@ -1,4 +1,4 @@
 [
-{"En":"Life is butiful.","Ja":"人生は美しい。"},
-{"En":"life","Ja":"人生"}
+{"En":"I dislike study.","Ja":"私は、勉強が嫌い。"},
+{"En":"study","Ja":"勉強"}
 ]

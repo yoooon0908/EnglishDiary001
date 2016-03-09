@@ -28,12 +28,6 @@ class SecondViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         appDelegate.edit = ""
         
         
-//        //背景画像
-//        UIGraphicsBeginImageContext(self.view.frame.size)
-//        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
-//        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        self.view.backgroundColor = UIColor(patternImage: image)
 
        
     }

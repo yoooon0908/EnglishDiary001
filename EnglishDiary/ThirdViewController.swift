@@ -13,22 +13,16 @@ import Social
 class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    @IBOutlet weak var thImageView: UIImageView!
-    @IBOutlet weak var thTextView: UITextView!
     
+    @IBOutlet weak var thImageView: UIImageView!
+    
+    @IBOutlet weak var thTextView: UITextView!
     
     var appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
 
     
     override func viewDidLoad() {
         
-//        //背景画像
-//        UIGraphicsBeginImageContext(self.view.frame.size)
-//        UIImage(named: "15.jpg")?.drawInRect(self.view.bounds)
-//        let image: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        self.view.backgroundColor = UIColor(patternImage: image)
-//
         super.viewDidLoad()
         
         appDelegate.edit = "edit"
@@ -46,6 +40,7 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UI
     }
     
     @IBAction func tapFBBtn(sender: UIButton) {
+
         var facebookVC = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
         facebookVC.setInitialText(thTextView.text)
         //facebookVC.addImage(UIImage(named: "cat.png"))
@@ -79,6 +74,8 @@ class ThirdViewController: UIViewController, UIImagePickerControllerDelegate, UI
         picker.dismissViewControllerAnimated(true, completion: nil)
         
     }
+    
+    
     @IBAction func tapStar(sender: UIButton) {
         appDelegate.texttmp = thTextView.text
 

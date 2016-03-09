@@ -127,8 +127,8 @@
 		E9EC86111C782E4A009D9D97 /* EnglishDiary */ = {
 			isa = PBXGroup;
 			children = (
-				E93177F41C87FE25000F6E1F /* 02.png */,
 				E93177E61C8517D2000F6E1F /* 01.png */,
+				E93177F41C87FE25000F6E1F /* 02.png */,
 				E93177F21C8587BC000F6E1F /* 03.png */,
 				E9EC86121C782E4A009D9D97 /* AppDelegate.swift */,
 				E9EC86141C782E4A009D9D97 /* ViewController.swift */,
